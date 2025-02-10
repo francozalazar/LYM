@@ -29,17 +29,21 @@ setInterval(() => {
     updateCarousel();
 }, 3000);
 
-//Carrusel Categorias
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('.splide', {
-        type       : 'loop',   // Loop infinito
-        perPage    : 3,        // Muestra 3 tarjetas
-        perMove    : 1,        // Se mueve de a 1
-        autoplay   : true,     // Autoplay activado
-        interval   : 3000,     // Tiempo entre cada slide (ms)
-        pauseOnHover: true,    // Pausa al pasar el mouse
-        arrows     : true,     // Flechas de navegación
-        pagination : true,      // Paginación activa
+        type        : 'loop',
+        perPage     : 3,  
+        perMove     : 1,
+        autoplay    : true,
+        interval    : 3000,
+        pauseOnHover: true,
+        arrows      : true,
+        pagination  : true,
+        breakpoints : {
+            980: { pagination: false },  // Escritorio grande
+            740: { perPage: 2},  // Escritorio grande
+            510: { perPage: 1,arrows: false,},
+        },
     }).mount();
 });
 

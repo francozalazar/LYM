@@ -228,3 +228,55 @@ body {
         animation-timing-function: ease-out;
     }
 }
+
+@media (max-width: 430px) {
+    .LogoImg img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .LoginConteiner {
+        width: 350px;
+        height: 300px;
+    }
+
+    .InputCotizar input {
+        width: 300px;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .InputConteiner {
+        display: flex;
+        justify-content: center;
+    }
+
+    .BtnLogin button {
+        width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    .LogoImg img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .LoginConteiner {
+        width: 300px;
+        height: 280px;
+    }
+
+    .InputCotizar input {
+        width: 270px;
+        padding: 8px;
+    }
+
+    .InputConteiner {
+        display: flex;
+        justify-content: center;
+    }
+
+    .BtnLogin button {
+        width: 270px;
+    }
+}

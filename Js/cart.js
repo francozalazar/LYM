@@ -1,13 +1,13 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-
+// Función para agregar productos al carrito con cantidad específica
 function agregarAlCarrito(nombre, precio, img, cantidad) {
     console.log(`Intentando agregar ${cantidad} ${nombre} al carrito.`);
 
+    // Verificar si la cantidad es válida (mayor que 0)
     if (cantidad <= 0 || isNaN(cantidad)) {
-        ( "error");
-        showProductNoti(nombre);
-        return;
+        mostrarNotificacion("Por favor, ingresa una cantidad válida.", "error");
+        return; // No agregar al carrito si la cantidad no es válida
     }
 
     let productoExistente = carrito.find(producto => producto.nombre === nombre);
@@ -17,78 +17,53 @@ function agregarAlCarrito(nombre, precio, img, cantidad) {
     } else {
         carrito.push({ nombre, precio, img, cantidad });
     }
-
     guardarCarrito();
-    showProductNotification(nombre);
+    actualizarCarrito();
+
+    // Mostrar notificación de éxito después de agregar el producto al carrito
+    mostrarNotificacion(`${cantidad} ${nombre} ha sido agregado al carrito.`, "exito");
 }
-function showProductNotification(productName) {
-    const notification = document.createElement("div");
-    notification.className = "product-notification";
-    notification.textContent = `${productName} fue agregado al carrito.`;
-    notification.style.cssText = `
-        position: fixed;
-        bottom: 0;
-        margin-bottom: 20px;
-        display:flex;
-        right: 20px;
-        background-color: #4caf50;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        font-size: 14px;
-        z-index: 1000;
-        animation: fadeInOut 3s forwards;
-        
-    `;
-}
-function showProductNoti(productName) {
-    const notification = document.createElement("div");
-    notification.className = "product-notification";
-    notification.textContent = `Ingrese una cantidad valida`;
-    notification.style.cssText = `
-        position: fixed;
-        bottom: 0;
-        margin-bottom: 20px;
-        display:flex;
-        right: 20px;
-        background-color:rgb(255, 0, 0);
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        font-size: 14px;
-        z-index: 1000;
-        animation: fadeInOut 3s forwards;
-        
-    `;
-    document.body.appendChild(notification);
+
+// Función para mostrar notificación en la pantalla
+function mostrarNotificacion(mensaje, tipo) {
+    let notificacion = document.createElement("div");
+    notificacion.classList.add("notif", tipo);
+    notificacion.textContent = mensaje;
+    
+    // Añadir la notificación al body
+    document.body.appendChild(notificacion);
+
+    // Mostrarla por un corto periodo de tiempo y luego eliminarla
+    setTimeout(() => {
+        notificacion.classList.add("mostrar");
+    }, 10);
 
     setTimeout(() => {
-        notification.remove();
-    }, 3000); // La notificación desaparece después de 3 segundos
+        notificacion.classList.remove("mostrar");
+        setTimeout(() => {
+            notificacion.remove();
+        }, 500); // Eliminar después de la animación
+    }, 3000); // Mantener la notificación visible por 3 segundos
 }
 
+// Función para guardar el carrito en localStorage
 function guardarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+// Función para actualizar el HTML del carrito
 function actualizarCarrito() {
     console.log("Actualizando carrito...");
     let tablaBody = document.querySelector("tbody");
     let total = 0;
     tablaBody.innerHTML = "";
 
-    carrito.forEach((producto, index) => {
+    carrito.forEach(producto => {
         let fila = document.createElement("tr");
         fila.innerHTML = `
             <td>${producto.nombre}</td>
-            <td><img src="${producto.img}" alt="${producto.nombre}" style="width: 50px;"></td>
-            <td class="cantidad-container">
-                <button class="btn-cantidad" onclick="decrementarCantidad(${index})">−</button>
-                <span class="cantidad">${producto.cantidad}</span>
-                <button class="btn-cantidad" onclick="incrementarCantidad(${index})">+</button>
-            </td>
+            <td><img src="${producto.img}" alt="${producto.nombre}"></td>
+            <td>${producto.cantidad}</td>
             <td>$${producto.precio * producto.cantidad}</td>
             <td><a href="#" class="eliminar" onclick="eliminarDelCarrito('${producto.nombre}')">Eliminar</a></td>
         `;
@@ -99,6 +74,7 @@ function actualizarCarrito() {
     guardarCarrito();
 }
 
+// Función para eliminar un producto del carrito
 function eliminarDelCarrito(nombre) {
     console.log(`Eliminando ${nombre} del carrito.`);
     carrito = carrito.filter(producto => producto.nombre !== nombre);
@@ -106,19 +82,7 @@ function eliminarDelCarrito(nombre) {
     actualizarCarrito();
 }
 
-function incrementarCantidad(index) {
-    carrito[index].cantidad++;
-    actualizarCarrito();
-}
-
-function decrementarCantidad(index) {
-    if (carrito[index].cantidad > 1) {
-        carrito[index].cantidad--;
-    } else {
-        carrito.splice(index, 1);
-    }
-    actualizarCarrito();
-}
+// Vincular botones de compra a la función agregarAlCarrito
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Documento cargado, vinculando botones de compra...");
     let botones = document.querySelectorAll(".cant-comprar button");
@@ -134,15 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
             let nombre = card.querySelector("h2").textContent;
+            let descripcion = card.querySelector("h3").textContent;
             let precio = parseFloat(card.querySelector("h2:last-of-type").textContent.replace("$", ""));
             let img = card.querySelector(".swiper-slide img").src;
             let cantidadInput = card.querySelector(".cant-comprar input");
-            let cantidad = parseInt(cantidadInput.value) || 0;
+            let cantidad = parseInt(cantidadInput.value) || 0; // Si no hay cantidad, 0 por defecto
             
             console.log(`Producto: ${nombre}, Precio: ${precio}, Cantidad: ${cantidad}, Imagen: ${img}`);
             agregarAlCarrito(nombre, precio, img, cantidad);
-            cantidadInput.value = "";
+            cantidadInput.value = ""; // Limpiar input después de agregar
         });
     });
+
     actualizarCarrito();
 });
