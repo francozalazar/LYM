@@ -404,6 +404,24 @@
     background-color: #495968;
 }
 
+.BtnCompra{
+    padding: 10px 20px 10px 20px;
+    border-radius: .25em;
+    border: none;
+    background-color: #343F4A;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    -webkit-box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
+    -moz-box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
+    box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
+    cursor: pointer;
+}
+
+.BtnCompra:hover{
+    background-color: #495968;
+}
+
 .btn-container{
     display: flex;
     justify-content: center;
@@ -425,7 +443,7 @@
 }
 
 .container-tabla{
-    width: 1800px;
+    width: 80%;
     background-color: #222D38;
     padding: 20px;
     border-radius: 20px;
@@ -564,3 +582,26 @@ img {
     opacity: 1;
     visibility: visible;
 }
+
+.swal2-popup {
+    width: 40% !important; /* Ajusta el ancho */
+    font-size: 14px; /* Reduce el tamaño de fuente */
+  }
+  .swal2-input {
+      width: 70% !important;
+      font-size: 14px !important;
+      padding: 8px !important;
+  }
+  .swal2-select{
+      width: 70% !important;
+      font-size: 14px !important;
+      padding: 8px !important;
+  }
+  .TituloCompra{
+      font-size: 20px;
+  }
+  .swal2-textarea{
+      width: 70% !important;
+      font-size: 14px !important;
+      padding: 8px !important;
+  }
