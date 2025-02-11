@@ -12,7 +12,7 @@ let productos = [
     {nombre: "taza",precio: 10000,descripcion: "Descripcion del producto",img1: "./assets/Cards/1.png",img2: "./assets/Cards/2.png",},
     {nombre: "plato",precio: 10000,descripcion: "Descripcion del producto",img1: "./assets/Cards/1.png",img2: "./assets/Cards/2.png",},
     {nombre: "tenedor",precio: 10000,descripcion: "Descripcion del producto",img1: "./assets/Cards/1.png",img2: "./assets/Cards/2.png",},
-    {nombre: "Television",precio: 10000,descripcion: "Descripcion del producto",img1: "./assets/Cards/1.png",img2: "./assets/Cards/2.png",},
+    {nombre: "Franco",precio: 10000,descripcion: "Descripcion del producto",img1: "./assets/Cards/1.png",img2: "./assets/Cards/2.png",},
     {nombre: "Television",precio: 10000,descripcion: "Descripcion del producto",img1: "./assets/Cards/1.png",img2: "./assets/Cards/2.png",},
     {nombre: "Television",precio: 10000,descripcion: "Descripcion del producto",img1: "./assets/Cards/1.png",img2: "./assets/Cards/2.png",},
     {nombre: "Television",precio: 10000,descripcion: "Descripcion del producto",img1: "./assets/Cards/1.png",img2: "./assets/Cards/2.png",},
