@@ -11,28 +11,11 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: #222D38;
     padding: 10px 20px;
-    position: relative;
     height: 90px;
-}
-
-.logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.logo-container img {
-    margin-top: 5px;
-    width: 120px;
-    height: 80px;
-}
-
-.Cart {
-    margin-left: auto;
+    justify-content: space-between;
 }
 
 .Cart a {
@@ -42,31 +25,25 @@
     margin-right: 20px;
 }
 
-.NavbarConteiner {
-    height: 60px;
-    background-color: #343F4A;
+.Inputnav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 50px;
-}
-
-.navbar {
-    display: flex;
-    gap: 30px;
-}
-
-.navbar a {
-    color: white;
+    justify-content: center;
+    position: relative;
+    margin-right: 100px;
 }
 
 .Inputnav input {
     width: 500px;
-    height: 35px;
+    height: 40px;
     border-radius: 20px;
-    border: none;
-    padding-left: 12px
+    border: 2px solid #ccc;
+    padding-left: 15px;
+    padding-right: 40px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel {
@@ -185,6 +162,7 @@
     height: 60px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-left: 70px;
 }
 
@@ -386,7 +364,7 @@
 }
 
 
-.BtnVermas{
+.BtnVermas {
     padding: 10px 20px 10px 20px;
     border-radius: 15px;
     border: none;
@@ -394,20 +372,39 @@
     color: white;
     font-size: 15px;
     font-weight: 500;
-    -webkit-box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
-    -moz-box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
-    box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
+    -webkit-box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
+    -moz-box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
+    box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
     cursor: pointer;
 }
 
-.BtnVermas:hover{
+.BtnVermas:hover {
     background-color: #495968;
 }
 
-.btn-container{
+.BtnCompra {
+    padding: 10px 20px 10px 20px;
+    border-radius: .25em;
+    border: none;
+    background-color: #343F4A;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    -webkit-box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
+    -moz-box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
+    box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
+    cursor: pointer;
+}
+
+.BtnCompra:hover {
+    background-color: #495968;
+}
+
+.btn-container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espacio entre los botones */
+    gap: 10px;
+    /* Espacio entre los botones */
     margin-top: 20px;
 }
 
@@ -417,15 +414,15 @@
     margin-top: 20px;
 }
 
-.centrar-tabla{
+.centrar-tabla {
     display: flex;
     justify-content: center;
     padding-top: 40px;
     margin-bottom: 10px;
 }
 
-.container-tabla{
-    width: 1800px;
+.container-tabla {
+    width: 80%;
     background-color: #222D38;
     padding: 20px;
     border-radius: 20px;
@@ -436,7 +433,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: left;
 }
@@ -448,7 +446,7 @@ th {
     font-weight: 500;
 }
 
-td{
+td {
     color: white;
     font-size: 16px;
     font-weight: 400;
@@ -482,31 +480,30 @@ img {
     padding: 5px 10px 5px 10px;
 }
 
-.eliminar:hover{
+.eliminar:hover {
     background-color: #f3464a;
 }
 
 .total {
     text-align: right;
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 1.2em;
     color: white;
     font-size: 20px;
     font-weight: 400;
 }
 
-.comprar-catalogo button{
+.comprar-catalogo button {
     padding: 10px 20px 10px 20px;
     border: 1px solid #343F4A;
     border-radius: 10px;
 }
 
-.comprar-catalogo{
+.comprar-catalogo {
     display: flex;
-    justify-content: right;
-    margin-right: 60px;
-    margin-bottom: 10px;
+    justify-content: center;
     gap: 40px;
+    padding-bottom: 10px;
 }
 
 
@@ -550,17 +547,48 @@ img {
 
 /* Estilo para notificación de éxito */
 .notif.exito {
-    background-color: #4CAF50; /* Color verde para el éxito */
+    background-color: #4CAF50;
+    /* Color verde para el éxito */
     color: white;
 }
 
 /* Estilo para notificación de error */
 .notif.error {
-    background-color: #f44336; /* Color rojo para el error */
+    background-color: #f44336;
+    /* Color rojo para el error */
     color: white;
 }
 
 .notif.mostrar {
     opacity: 1;
     visibility: visible;
+}
+
+.swal2-popup {
+    width: 40% !important;
+    /* Ajusta el ancho */
+    font-size: 14px;
+    /* Reduce el tamaño de fuente */
+}
+
+.swal2-input {
+    width: 70% !important;
+    font-size: 14px !important;
+    padding: 8px !important;
+}
+
+.swal2-select {
+    width: 70% !important;
+    font-size: 14px !important;
+    padding: 8px !important;
+}
+
+.TituloCompra {
+    font-size: 20px;
+}
+
+.swal2-textarea {
+    width: 70% !important;
+    font-size: 14px !important;
+    padding: 8px !important;
 }

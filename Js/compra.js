@@ -6,6 +6,7 @@ document.getElementById("comprarBtn").addEventListener("click", () => {
             title: "Carrito vacío",
             text: "No puedes continuar con la compra porque el carrito está vacío.",
             icon: "warning",
+            customClass: {confirmButton: "BtnCompra",},
             confirmButtonText: "Aceptar"
         });
         return; // Detiene la ejecución si no hay productos
@@ -24,9 +25,13 @@ document.getElementById("comprarBtn").addEventListener("click", () => {
             </select>
             <textarea id="mensaje" class="swal2-textarea" placeholder="Mensaje adicional"></textarea>
         `,
+        customClass: {
+            title: "TituloCompra",},
         confirmButtonText: "Confirmar compra",
+        customClass: {confirmButton: "BtnCompra",},
         showCancelButton: true,
         cancelButtonText: "Cancelar",
+        width: "40%",
         preConfirm: () => {
             const nombre = document.getElementById("nombre").value;
             const localidad = document.getElementById("localidad").value;

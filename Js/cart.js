@@ -9,7 +9,6 @@ function agregarAlCarrito(nombre, precio, img, cantidad) {
         mostrarNotificacion("Por favor, ingresa una cantidad válida.", "error");
         return; // No agregar al carrito si la cantidad no es válida
     }
-
     let productoExistente = carrito.find(producto => producto.nombre === nombre);
     
     if (productoExistente) {
@@ -17,11 +16,20 @@ function agregarAlCarrito(nombre, precio, img, cantidad) {
     } else {
         carrito.push({ nombre, precio, img, cantidad });
     }
+    noticarrito()
     guardarCarrito();
-    actualizarCarrito();
+}
 
-    // Mostrar notificación de éxito después de agregar el producto al carrito
-    mostrarNotificacion(`${cantidad} ${nombre} ha sido agregado al carrito.`, "exito");
+function noticarrito(){
+    Toastify({
+        text: "Agregaste un producto al carrito.",
+        duration: 3000,
+        gravity: "top",
+        position: "center",
+        style: {
+            background: "linear-gradient(to right,rgb(25, 179, 64),rgb(14, 248, 45))",
+        }
+    }).showToast();
 }
 
 // Función para mostrar notificación en la pantalla
