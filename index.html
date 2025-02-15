@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title></title>
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -21,7 +20,6 @@
             </div>
             <div class="Inputnav">
                 <input id="Busqueda"  type="search" placeholder="Buscar...">
-                <img src="./assets/HEADER/LUOA.svg" alt="">
             </div>
             <div class="Cart">
                 <a href="./Pages/pedidos.html">Ver pedido</a>
@@ -29,6 +27,9 @@
         </div>
     </header>
     <main>
+        <a href="#mi-seccion" class="boton-flotante">
+            ⬆
+        </a>
         <section>
             <div class="carousel">
                 <div class="carousel-track">
@@ -130,7 +131,7 @@
         </section>
         <section>
             <div class="padding-top">
-                <div class="nuestros-productos">
+                <div class="nuestros-productos" id="mi-seccion">
                     <h2>NUESTROS PRODUCTOS! </h2>
                 </div>
             </div>            
@@ -149,5 +150,6 @@
     <script src="./Js/cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

@@ -25,8 +25,6 @@ document.getElementById("comprarBtn").addEventListener("click", () => {
             </select>
             <textarea id="mensaje" class="swal2-textarea" placeholder="Mensaje adicional"></textarea>
         `,
-        customClass: {
-            title: "TituloCompra",},
         confirmButtonText: "Confirmar compra",
         customClass: {confirmButton: "BtnCompra",},
         showCancelButton: true,
