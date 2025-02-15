@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirigir www a sin www
+RewriteCond %{HTTP_HOST} ^www\.importacioneslym\.com$ [NC]
+RewriteRule ^(.*)$ https://importacioneslym.com/$1 [R=301,L]
