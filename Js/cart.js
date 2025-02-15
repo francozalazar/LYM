@@ -119,7 +119,7 @@ function manejarCompra(event) {
         return;
     }
     let nombre = card.querySelector("h2").textContent;
-    let precio = parseFloat(card.querySelector("h2:last-of-type").textContent.replace("$", ""));
+    let precio = parseFloat(card.querySelector("h4").textContent.replace("$", ""));
     let img = card.querySelector(".swiper-slide img").src;
     let cantidadInput = card.querySelector(".cant-comprar input");
     let cantidad = parseInt(cantidadInput.value) || 0;
