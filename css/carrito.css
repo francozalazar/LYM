@@ -16,25 +16,22 @@ html {
 .header {
     display: flex;
     align-items: center;
+    gap: 200px;
     background-color: #222D38;
     padding: 10px 20px;
     height: 90px;
-    justify-content: space-between;
+    justify-content: center;
 }
-
 .Cart a {
     color: white;
     font-weight: 500;
     text-decoration: none;
-    margin-right: 20px;
 }
-
 .Inputnav {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-right: 100px;
 }
 
 .Inputnav input {

@@ -742,3 +742,52 @@
 =======
 >>>>>>> ab9155555784cd91eb65eea5abd7fd6fb43fc6df
 }
+
+@media (max-width: 553px){
+    .cantidad-btn {
+        padding: 2px 5px;
+    }
+
+    .cantidad-container {
+        gap: 5px;
+    }
+
+    .cantidad-input {
+        padding: 5px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+    
+    th,
+    td {
+    padding: 5px;
+    text-align: left;
+}
+}
+
+@media (max-width: 425px){
+    .cantidad-btn {
+        padding: 2px 2px;
+        font-size: 12px;
+    }
+
+    .cantidad-container {
+        gap: 5px;
+    }
+
+    .cantidad-input {
+        padding: 0px 0px;
+    }
+
+    td {
+        font-size: 10px;
+    }
+    
+    th,
+    td {
+    padding: 5px;
+    text-align: left;
+}
+}
