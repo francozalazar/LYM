@@ -72,7 +72,7 @@ document.getElementById("comprarBtn").addEventListener("click", () => {
 
                 form.submit(); // Enviar formulario a FormSubmit
 
-                Swal.fire("¡Compra realizada!", "Te hemos enviado un correo con los detalles del pedido.", "success");
+                Swal.fire("¡Pedido realizado!", "Te hemos enviado un correo con los detalles del pedido, nos comunicaremos a tu numero para seguir con la compra!", "success");
             } else {
                 Swal.fire("Error", "No se encontró el formulario de compra.", "error");
             }

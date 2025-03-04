@@ -8,7 +8,7 @@ function validarContraseña() {
     const contraseñaIngresada = document.getElementById("password").value;
 
     if (contraseñaIngresada === contraseñaCorrecta) {
-        window.location.href = "../index.html";
+        window.location.href = "./productos.html";
     } else {
         Toastify({
             text: "⚠️ Contraseña incorrecta",
@@ -16,7 +16,7 @@ function validarContraseña() {
             gravity: "top",
             position: "center",
             style: {
-                background: "linear-gradient(to right, #343F4A,rgb(42, 70, 99))",
+                background: "linear-gradient(to right,rgb(255, 0, 0),rgb(182, 2, 2))",
             }
         }).showToast();
     }

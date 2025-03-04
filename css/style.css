@@ -18,15 +18,15 @@ html {
 }
 
 .logo-container img{
-    width: 50px;
-    height: 50px;
+    width: 120px;
+    height: 120px;
 }
 
 .header {
     display: flex;
     align-items: center;
     gap: 200px;
-    background-color: #222D38;
+    background-color: #000000;
     padding: 10px 20px;
     height: 90px;
     justify-content: center;
@@ -35,6 +35,7 @@ html {
     color: white;
     font-weight: 500;
     text-decoration: none;
+    margin-left: 30px;
 }
 .Inputnav {
     display: flex;
@@ -62,7 +63,7 @@ html {
     right: 20px; /* Espaciado desde la derecha */
     width: 50px; /* Tamaño del botón */
     height: 50px;
-    background-color: #495968;
+    background-color: #222222;
     color: white;
     display: flex;
     justify-content: center;
@@ -76,7 +77,7 @@ html {
 }
 
 .boton-flotante:hover {
-    background-color: #343F4A;
+    background-color: #000000;
 }
 
 .carousel {
@@ -114,7 +115,7 @@ html {
 }
 
 .carousel-button {
-    background-color: #343f4a94;
+    background-color: #00000094;
     border: none;
     color: white;
     font-size: 24px;
@@ -124,7 +125,7 @@ html {
 }
 
 .carousel-button:hover {
-    background-color: #343F4A;
+    background-color: #db0000;
 }
 
 /*Categorias*/
@@ -150,7 +151,7 @@ html {
     width: 280px;
     height: 220px;
     border-radius: 20px;
-    background-color: #343F4A;
+    background-color: #000000;
     margin-left: 10px;
     margin-right: 10px;
     display: flex;
@@ -162,7 +163,6 @@ html {
 .primera-card img {
     width: 100%;
     height: 140px;
-    object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
 
@@ -189,7 +189,7 @@ html {
 }
 
 .nuestros-productos {
-    background-color: #343F4A;
+    background-color: #000000;
     width: 100%;
     height: 60px;
     display: flex;
@@ -248,7 +248,7 @@ html {
 }
 
 .boton-carrusel:hover {
-    background: #555;
+    background: #000000;
 }
 
 
@@ -274,7 +274,7 @@ html {
     height: 600px;
     max-width: 400px;
     border-radius: 15px;
-    background-color: #343F4A;
+    background-color: #000000;
     padding: 15px;
     overflow: hidden;
     position: relative;
@@ -341,8 +341,8 @@ html {
     margin: 0px auto;
     padding: 8px 16px;
     border: none;
-    background-color: #495968;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     font-size: 14px;
     font-weight: 500;
     border-radius: 8px;
@@ -351,7 +351,7 @@ html {
 }
 
 .ver-mas-btn:hover {
-    background-color: #5a6b7e;
+    background-color: #db0000;
 }
 
 /* --- BOTÓN COMPRAR Y CANTIDAD --- */
@@ -377,15 +377,15 @@ html {
     height: 40px;
     border-radius: 8px;
     border: none;
-    background-color: #495968;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
 
 .cant-comprar button:hover {
-    background-color: #5a6b7e;
+    background-color: #db0000;
 }
 
 .flex-footer h3 {
@@ -399,7 +399,7 @@ html {
     padding: 10px 20px 10px 20px;
     border-radius: 15px;
     border: none;
-    background-color: #343F4A;
+    background-color: #000000;
     color: white;
     font-size: 15px;
     font-weight: 500;
@@ -410,7 +410,7 @@ html {
 }
 
 .BtnVermas:hover {
-    background-color: #495968;
+    background-color: #db0000;
 }
 
 .btn-container {
@@ -444,7 +444,48 @@ html {
 .popup-modal {
     width: 200px;
     padding: 20px;
-    background-color: #343F4A;
+    background-color: #252525;
     border-radius: 10px;
     color: white;
+}
+
+.footer{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+.logo-footer img{
+    width: 200px;
+}
+
+.logo-footer{
+    margin-left: 150px;
+}
+
+.footer-redes{
+    display: flex;
+    flex-direction: column;
+} 
+
+.flex-footer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+    margin-right: 150px;
+}
+
+.flex-footer a img{
+    width: 50px;
+    height: 50px;
+}
+
+.flex-footer h3{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
 }
