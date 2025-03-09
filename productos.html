@@ -10,21 +10,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <title></title>
 </head>
 
 <body>
     <header>
         <div class="header">
+            <div class="search-icon" onclick="toggleMenu()">
+                <img class="" src="./assets/HEADER/lupa.svg" alt="">
+            </div>
+            <div class="search-menu" id="searchMenu">
+                <div class="search-content">
+                    <input type="text" placeholder="Buscar productos..." id="Busqueda">
+                    <button onclick="buscar()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
             <div class="logo-container">
                 <img src="./assets/HEADER/logo.png" alt="Logo">
             </div>
-            <div class="Inputnav">
-                <input id="Busqueda" type="search" placeholder="Buscar...">
-            </div>
-            <div class="Cart">
-                <a href="./Pages/contacto.html">Contacto</a>
-                <a href="./Pages/pedidos.html">Ver pedido</a>
+            <div>
+                <nav class="menu">
+                    <div class="hamburger" onclick="menuhambuerguesa()">
+                        <img src="./assets/HEADER/menu.svg" alt="">
+                    </div>
+                    <div class="menu-links">
+                        <a href="#mi-seccion">Productos</a>
+                        <a href="./Pages/contacto.html">Contacto</a>
+                        <a href="./Pages/pedidos.html">Ver pedido</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -129,21 +146,27 @@
     <footer>
         <section>
             <div class="footer">
-                <div class="logo-footer">
-                    <img src="./assets/HEADER/logo.png" alt="Reemplazar imagen">
-                </div>
-                <div class="footer-redes">
-                    <div class="flex-footer">
-                        <a href="#"><img src="./assets/Footer/ig.svg" alt="Instagram"></a>
-                        <a href="#">
-                            <h3>Instagram</h3>
-                        </a>
+                <div class="Contenedor-footer">
+                    <div class="logo-footer">
+                        <img src="./assets/HEADER/logo.png" alt="Reemplazar imagen">
                     </div>
-                    <div class="flex-footer">
-                        <a href="#"><img src="./assets/Footer/wpp.svg" alt="Whatsapp"></a>
-                        <a href="#">
-                            <h3>Whatsapp</h3>
-                        </a>
+                    <div class="Footer-secciones">
+                        <a href="./productos.html">Productos</a>
+                        <a href="./Pages/contacto.html">Contacto</a>
+                        <a href="./Pages/pedidos.html">Ver pedido</a>
+                    </div>
+                    <div class="Footer-mail">
+                        <a href="mailto:pedidos@importacioneslym.com">pedidos@importacioneslym.com</a>
+                    </div>
+                    <div class="Footer-logo">
+                        <a href=""><img src="./assets/Footer/ig.svg" alt=""></a>
+                        <a href=""><img src="./assets/Footer/wpp.svg" alt=""></a>
+                    </div>
+                    <div class="Footer-creado">
+                        <h2>creado por DivStudio</h2>
+                    </div>
+                    <div class="Footer-copy">
+                        <h2>Copyright LyM Importaciones - 20468713387 - 2025. Todos los derechos reservados.</h2>
                     </div>
                 </div>
             </div>
@@ -153,9 +176,11 @@
     <script src="./Js/carrusel.js"></script>
     <script src="./Js/Card.js"></script>
     <script src="./Js/cart.js"></script>
+    <script src="./Js/Navbar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

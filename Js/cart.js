@@ -80,9 +80,24 @@ function actualizarCarrito() {
         tablaBody.appendChild(fila);
         total += producto.precio * producto.cantidad;
     });
-    document.querySelector(".total").innerHTML = `<strong>Total:</strong> $${total}`;
+
+    // Verificar si el total supera los 100k y aplicar el descuento
+    if (total > 100000) {
+        let descuento = total * 0.02;  // 2% de descuento
+        let totalConDescuento = total - descuento;
+
+        // Actualiza el total con el precio original tachado y el precio con descuento
+        document.querySelector(".total").innerHTML = `
+            <strong>Total:</strong> <span class="tachado">$${total.toFixed(2)}</span> 
+            <span class="con-descuento">$${totalConDescuento.toFixed(2)}</span>
+        `;
+    } else {
+        document.querySelector(".total").innerHTML = `<strong>Total:</strong> $${total.toFixed(2)}`;
+    }
+
     guardarCarrito();
 }
+
 
 function eliminarDelCarrito(nombre) {
     carrito = carrito.filter(producto => producto.nombre !== nombre);

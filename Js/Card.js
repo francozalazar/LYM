@@ -3,7 +3,6 @@ let productos = [
     {nombre: "Auriculares I12", categoria:"auriculares", precio: 8000,descripcion: "El auricular i12 cuenta con tecnología inalámbrica y sin botones. Se conecta a través de Bluetooth a tu móvil y se controla a través de un control táctil directamente en tu oído.",img1: "./assets/Cards/2.jpg",img2: "./assets/Cards/2 2.jpg",},
     {nombre: "Auriculares BT P2961",categoria:"auriculares", precio: 20000,descripcion: "Los auriculares BT P2961 son un producto interesante que ofrece tecnología inalámbrica Bluetooth para una conexión estable y de alta calidad.",img1: "./assets/Cards/23.jpg",img2: "./assets/Cards/23 2.webp",},
     {nombre: "Auriculares BT P47",categoria:"auriculares", precio: 10000,descripcion: "Auriculares P47 con Bluetooth son un producto interesante que ofrece una conexión inalámbrica estable y de alta calidad.",img1: "./assets/Cards/18.webp",img2: "./assets/Cards/18 2.webp",},
-    {nombre: "Parlante 3' sing e con soporte",categoria:"audio", precio: 13000,descripcion: "El parlante 3 en 1 Sing E con soporte es un producto versátil que combina las funciones de altavoz Bluetooth, micrófono para karaoke y soporte para teléfono o tableta.",img1: "./assets/Cards/19.jpg",img2: "./assets/Cards/19 2.jpg",},
     {nombre: "Parlante Pc redondo",categoria:"audio", precio: 7500,descripcion: "El parlante PC redondo es un altavoz compacto y elegante diseñado para computadoras personales.",img1: "./assets/Cards/20.webp",img2: "./assets/Cards/20 2.jpg",},
     {nombre: "Parlante BT karaoke con microfono",categoria:"audio", precio: 15000,descripcion: "El parlante BT Karaoke con micrófono es un producto divertido y versátil que permite disfrutar de sesiones de karaoke en cualquier lugar.",img1: "./assets/Cards/17.jpg",img2: "./assets/Cards/17 2.webp",},
     {nombre: "Camara smart wifi 3 antenas",categoria:"seguridad", precio: 23000,descripcion: "La cámara S-Mart WiFi con 3 antenas es un dispositivo de seguridad doméstica que ofrece una conexión inalámbrica estable y de alta calidad",img1: "./assets/Cards/6.webp",img2: "./assets/Cards/6 2.webp",},
@@ -29,10 +28,10 @@ let productos = [
     {nombre: "Kit 115 piezas alpina herramientas de precision",categoria:"herramientas", precio: 17000,descripcion: "El kit de 115 piezas de herramientas de alta precisión Alpina es un conjunto completo y versátil de herramientas para realizar diversas tareas de reparación y mantenimiento con su diseño ergonomico, de alta calidad y resistencia",img1: "./assets/Cards/11.jpg",img2: "./assets/Cards/11 2.jpg",},
     {nombre: "Mochila adidas con cargador usb",categoria:"accesorios", precio: 17000,descripcion: "La mochila Adidas USB con cargador es una mochila práctica y tecnológica que combina la funcionalidad de una mochila tradicional con la capacidad de cargar dispositivos electrónicos en movimiento.",img1: "./assets/Cards/1.webp",img2: "./assets/Cards/2.webp",},
     {nombre: "Mochila nike con cargador usb",categoria:"accesorios",precio: 17000,descripcion: "La mochila Nike USB con cargador es una mochila práctica y tecnológica que combina la funcionalidad de una mochila tradicional con la capacidad de cargar dispositivos electrónicos en movimiento.",img1: "./assets/Cards/1.webp",img2: "./assets/Cards/2.webp",},
-    {nombre: "Joystick ps4 messi inter miami",categoria:"accesorios",precio: 25000,descripcion: "El joystick PS4 Modelo Messi Inter Miami es un controlador personalizado y oficial para la consola PlayStation 4, diseñado específicamente para los fanáticos del fútbol y del jugador Lionel Messi.",img1: "./assets/Cards/1.JPG",img2: "./assets/Cards/2.JPG",},
-    {nombre: "Drone E88D doble camara",categoria:"fotografia", precio: 38000,descripcion: "El drone E88D con doble cámara es un dispositivo aéreo innovador y versátil que ofrece una experiencia de vuelo emocionante y captura de imágenes de alta calidad.",img1: "./assets/Cards/22.JPG",img2: "./assets/Cards/22 2.JPG",},
-    {nombre: "Drone K13 doble camara HD",categoria:"fotografia", precio: 45000,descripcion: "El drone K13 con doble cámara HD es un dispositivo aéreo innovador y versátil que ofrece una experiencia de vuelo emocionante y captura de imágenes de alta calidad.",img1: "./assets/Cards/21.webp",img2: "./assets/Cards/21 2.JPG",},
-    {nombre: "Picana electrica c/linterna chica",categoria:"seguridad", precio: 12000,descripcion: "La picana eléctrica con linterna chica es un dispositivo práctico y versátil que combina la funcionalidad de una picana eléctrica con la iluminación de una linterna.",img1: "./assets/Cards/10.JPG",img2: "./assets/Cards/10 2.webp",},
+    {nombre: "Joystick ps4 messi inter miami",categoria:"accesorios",precio: 25000,descripcion: "El joystick PS4 Modelo Messi Inter Miami es un controlador personalizado y oficial para la consola PlayStation 4, diseñado específicamente para los fanáticos del fútbol y del jugador Lionel Messi.",img1: "./assets/Cards/1.JPG",img2: "./assets/Cards/2.jpg",},
+    {nombre: "Drone E88D doble camara",categoria:"fotografia", precio: 38000,descripcion: "El drone E88D con doble cámara es un dispositivo aéreo innovador y versátil que ofrece una experiencia de vuelo emocionante y captura de imágenes de alta calidad.",img1: "./assets/Cards/22.jpg",img2: "./assets/Cards/22 2.jpg",},
+    {nombre: "Drone K13 doble camara HD",categoria:"fotografia", precio: 45000,descripcion: "El drone K13 con doble cámara HD es un dispositivo aéreo innovador y versátil que ofrece una experiencia de vuelo emocionante y captura de imágenes de alta calidad.",img1: "./assets/Cards/21.webp",img2: "./assets/Cards/21 2.jpg",},
+    {nombre: "Picana electrica c/linterna chica",categoria:"seguridad", precio: 12000,descripcion: "La picana eléctrica con linterna chica es un dispositivo práctico y versátil que combina la funcionalidad de una picana eléctrica con la iluminación de una linterna.",img1: "./assets/Cards/10.jpg",img2: "./assets/Cards/10 2.webp",},
     {nombre: "Barra de sonido audioritmico RGB",categoria:"audio", precio: 9000,descripcion: "La barra de sonido Audioritmico RGB es un dispositivo de audio innovador y emocionante que combina la calidad de sonido excepcional con la iluminación RGB personalizable.",img1: "./assets/Cards/1.webp",img2: "./assets/Cards/2.webp",},
     {nombre: "Gas pimienta 60ML",categoria:"seguridad", precio: 10000,descripcion: "El gas pimienta de 60 ml es un dispositivo de defensa personal compacto y eficaz que emite un spray de pimienta para disuadir y proteger contra amenazas.",img1: "./assets/Cards/13.jpg",img2: "./assets/Cards/13 2.jpg",},
 ];
@@ -41,7 +40,7 @@ document.querySelectorAll(".primera-card").forEach(card => {
     card.addEventListener("click", function () {
         let categoria = this.querySelector("h2").textContent.toLowerCase();
         productosFiltrados = productos.filter(producto => producto.categoria === categoria);
-        mostrarCantidad = 9; // Reiniciar la cantidad de productos a mostrar
+        mostrarCantidad = 12; // Reiniciar la cantidad de productos a mostrar
         mostrarProductos();
         document.querySelector(".nuestros-productos").scrollIntoView({
             behavior: "smooth"
@@ -51,12 +50,31 @@ document.querySelectorAll(".primera-card").forEach(card => {
 
 
 let contenedor = document.getElementById("ContenedorCard");
-let mostrarCantidad = 9;
+let mostrarCantidad = 12;
 let productosFiltrados = [...productos];
 
 let inputBusqueda = document.getElementById("Busqueda");
 
 function mostrarProductos() {
+    inputBusqueda.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            let termino = inputBusqueda.value.toLowerCase();
+            productosFiltrados = termino ? productos.filter(producto =>
+                producto.nombre.toLowerCase().includes(termino)
+            ) : [...productos];
+            mostrarProductos();
+            document.querySelector(".nuestros-productos").scrollIntoView({
+                behavior: "smooth"
+            });
+    
+            // Cerrar la barra de búsqueda
+            const searchMenu = document.getElementById('searchMenu');
+            if (searchMenu.classList.contains('show')) {
+                searchMenu.classList.remove('show');
+            }
+        }
+    });
+    
     contenedor.innerHTML = "";
 
     if (productosFiltrados.length === 0) {
@@ -67,15 +85,12 @@ function mostrarProductos() {
     let swiperStyle = document.createElement("style");
     swiperStyle.innerHTML = `
     .swiper-button-next, .swiper-button-prev {
-        color: #db0000;
+        color:rgb(255, 255, 255);
     }
 
     .swiper-pagination-bullet {
-        background-color: #db0000;
-    }
-
-    .swiper-pagination-bullet-active {
-        background-color: #db0000;
+        display: none;
+        background-color:rgb(255, 255, 255);
     }
 `;
     document.head.appendChild(swiperStyle);
@@ -93,14 +108,11 @@ function mostrarProductos() {
                 <div class="swiper-pagination"></div>
             </div>
             <h2>${producto.nombre}</h2>
-            <h3 class="descripcion-corta">${producto.descripcion.substring(0, 35)}...</h3>
-            <button class="ver-mas-btn" onclick="toggleDescripcion(event, ${index})">Ver Info</button>
-            <h4>$${producto.precio}</h4>
-            <div class="cant-comprar">
-                <input type="number" placeholder="Cantidad" min="1">
-                <button class="comprar-btn">Comprar</button>
-                <a href="./Pages/pedidos.html"><button class="comprar-btn">Ver pedido</button></a>
+            <div class="pedido-conteiner">
+                <button class="pedido-btn" onclick="toggleDescripcion(event, ${index})">Comprar</button>
+                <a href="./Pages/pedidos.html"><button class="pedido-btn">Ver pedido</button></a>
             </div>
+            <h4>$${producto.precio}</h4>
         </div>`;
     });
 
@@ -138,7 +150,6 @@ function toggleDescripcion(event, index) {
 function mostrarDetalleProducto(index) {
     let producto = productos[index];
     Swal.fire({
-        title: producto.nombre,
         html: `
             <div class="swiper mySwiperModal">
                 <div class="swiper-wrapper">
@@ -149,8 +160,9 @@ function mostrarDetalleProducto(index) {
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
+            <h2 class="precio">${producto.nombre}</h2>
             <p class="descripcion">${producto.descripcion}</p>
-            <h3 class="precio">Precio: $${producto.precio}</h3>
+            <h3 class="precio">$${producto.precio}</h3>
             <div class="cant-comprar">
                 <input type="number" placeholder="Cantidad" min="1" id="cantidadProducto" class="input-cantidad">
                 <button class="btn-comprar" onclick="comprarDesdeModal(${index})">Comprar</button>
@@ -159,7 +171,7 @@ function mostrarDetalleProducto(index) {
         customClass: {
             title: 'titulo-verinfo',
         },
-        width: "30%",
+        width: "20%",
         showCloseButton: true,
         showConfirmButton: false,
         didOpen: () => {
@@ -310,4 +322,9 @@ function agregarAlCarrito(nombre, precio, img, cantidad) {
     }
 
     console.log(`Producto agregado al carrito: ${nombre}, ${precio}, ${cantidad}, ${img}`);
+}
+
+function toggleMenu() {
+    const searchMenu = document.getElementById('searchMenu');
+    searchMenu.classList.toggle('show');
 }

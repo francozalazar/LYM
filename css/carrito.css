@@ -54,11 +54,6 @@ html {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.mensaje-no-encontrado {
-    font-size: 20px;
-    color: #db0000;
-    margin-top: 20px;
-}
 
 .centrar-tabla {
     display: flex;
@@ -243,4 +238,15 @@ img {
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+.total .tachado {
+    text-decoration: line-through;
+    color: #ff0000; /* Rojo para el precio tachado */
+    margin-right: 10px;
+}
+
+.total .con-descuento {
+    color: #4CAF50; /* Verde para el precio con descuento */
+    font-weight: bold;
 }

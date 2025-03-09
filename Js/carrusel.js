@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         interval    : 3000,
         pauseOnHover: true,
         arrows      : true,
-        pagination  : true,
+        pagination  : false,
         breakpoints : {
             980: { pagination: false },  // Escritorio grande
             740: { perPage: 2},  // Escritorio grande

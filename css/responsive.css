@@ -95,14 +95,6 @@
         gap: 10px;
     }
 
-    .cant-comprar input {
-        width: 100px;
-        height: 40px;
-        border-radius: 10px;
-        border: none;
-        padding-left: 5px;
-    }
-
     .cant-comprar button {
         width: 100px;
         height: 40px;
@@ -210,27 +202,6 @@
         justify-content: center;
         margin: 5px 0;
     }
-
-    .cant-comprar {
-        display: flex;
-        justify-content: center;
-        padding-top: 12px;
-        gap: 10px;
-    }
-
-    .cant-comprar input {
-        width: 100px;
-        height: 40px;
-        border-radius: 10px;
-        border: none;
-        padding-left: 5px;
-    }
-
-    .cant-comprar button {
-        width: 100px;
-        height: 40px;
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 920px) {
@@ -274,27 +245,6 @@
         display: flex;
         justify-content: center;
         margin: 5px 0;
-    }
-
-    .cant-comprar {
-        display: flex;
-        justify-content: center;
-        padding-top: 12px;
-        gap: 10px;
-    }
-
-    .cant-comprar input {
-        width: 100px;
-        height: 40px;
-        border-radius: 10px;
-        border: none;
-        padding-left: 5px;
-    }
-
-    .cant-comprar button {
-        width: 100px;
-        height: 40px;
-        font-size: 14px;
     }
 }
 
@@ -344,27 +294,6 @@
         justify-content: center;
         margin: 5px 0;
     }
-
-    .cant-comprar {
-        display: flex;
-        justify-content: center;
-        padding-top: 12px;
-        gap: 10px;
-    }
-
-    .cant-comprar input {
-        width: 100px;
-        height: 40px;
-        border-radius: 10px;
-        border: none;
-        padding-left: 5px;
-    }
-
-    .cant-comprar button {
-        width: 100px;
-        height: 40px;
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 510px) {
@@ -399,6 +328,10 @@
 
 @media (max-width: 430px) {
 
+    .pedido-btn{
+        padding: 8px 12px;
+    }
+
     .CardConteiner {
         display: grid;
         grid-template-columns: repeat(1, 320px);
@@ -406,16 +339,6 @@
     }
 
     /* SWIPER (SLIDER DE IMÁGENES EN LAS CARDS)*/
-    .swiper {
-        width: 100%;
-        height: 200px;
-    }
-
-    .swiper-slide img {
-        width: 100%;
-        height: 200px;
-        border-radius: 15px;
-    }
 
     .segunda-card {
         height: 450px;
@@ -598,7 +521,7 @@
 
 @media (max-width: 940px) {
     .swal2-popup {
-        width: 70% !important;
+        width: 40% !important;
         /* Ajusta el ancho */
         font-size: 14px;
         /* Reduce el tamaño de fuente */
@@ -754,64 +677,177 @@
 }
 
 
-@media (max-width: 935px){
-    .logo-footer img{
-        width: 150px;
-        height: 150px;
+@media (max-width: 1770px){
+    .swal2-popup {
+        width: 23% !important;
+        /* Ajusta el ancho */
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
+
+@media (max-width: 1525px){
+    .swal2-popup {
+        width: 25% !important;
+        /* Ajusta el ancho */
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
+
+@media (max-width: 1460px){
+    .swal2-popup {
+        width: 29% !important;
+        /* Ajusta el ancho */
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
+
+@media (max-width: 1200px){
+    .swal2-popup {
+        width: 30% !important;
+        /* Ajusta el ancho */
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
+
+@media (max-width: 1150px){
+    .swal2-popup {
+        width: 35% !important;
+        /* Ajusta el ancho */
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
+
+@media (max-width: 950px){
+    .swal2-popup {
+        width: 40% !important;
+        /* Ajusta el ancho */
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
+
+@media (max-width: 830px){
+    .swal2-popup {
+        width: 45% !important;
+        /* Ajusta el ancho */
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
+
+@media (max-width: 750px){
+    .swal2-popup {
+        width: 50% !important;
+        /* Ajusta el ancho */
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
+
+@media (max-width: 680px){
+    .swal2-popup {
+        width: 55% !important;
+        /* Ajusta el ancho */
+        height: 500px;
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
     }
 
-    .flex-footer a img{
-        width: 35px;
-        height: 35px;
+    .mySwiperModal{
+        height: 250px;
+    }
+    
+    .descripcion {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #ffffff;
+        margin-top: 10px;
     }
 
-    .flex-footer a h3{
+    .cant-comprar{
+        margin: 0px;
+    }
+    
+    .precio {
+        color: #ff6969;
         font-size: 16px;
+        margin-top: 15px;
     }
-
-    .flex-footer{
-        margin-right: 100px;
-    }
-
-    .logo-footer{
-        margin-left: 100px;
+    
+    .popup-modal img{
+        height: 250px;
     }
 }
 
-@media (max-width: 570px){
-    .logo-footer img{
-        width: 100px;
-        height: 100px;
-    }
-
-    .flex-footer a h3{
+@media (max-width: 680px){
+    .swal2-popup {
+        width: 60% !important;
+        /* Ajusta el ancho */
+        height: 500px;
         font-size: 14px;
-    }
-
-    .flex-footer{
-        padding-top: 10px;
+        /* Reduce el tamaño de fuente */
     }
 }
 
-@media (max-width: 438px){
-    .logo-footer img{
-        width: 85px;
-        height: 85px;
+@media (max-width: 560px){
+    .mySwiperModal{
+        height: 200px;
     }
+    .popup-modal img{
+        height: 200px;
+    }
+}
 
-    .flex-footer a h3{
+@media (max-width: 500px){
+    .swal2-popup {
+        width: 73% !important;
+        /* Ajusta el ancho */
+        height: 500px;
         font-size: 14px;
+        /* Reduce el tamaño de fuente */
     }
+}
 
-    .flex-footer{
-        margin-right: 50px;
+@media (max-width: 390px){
+    .mySwiperModal{
+        height: 200px;
     }
-
-    .logo-footer{
-        margin-left: 50px;
+    .popup-modal img{
+        height: 200px;
     }
+    
+    .swal2-popup {
+        width: 88% !important;
+        /* Ajusta el ancho */
+        height: 500px;
+        font-size: 14px;
+        /* Reduce el tamaño de fuente */
+    }
+}
 
-    .flex-footer{
-        padding-top: 5px;
+
+@media (max-width: 1400px){
+    .footer{
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px){
+    .Footer-copy h2{
+        text-align: center;
+
+    }
+}
+
+@media (max-width: 630px){
+    .logo-container img{
+        width: 120px;
+        height: 120px;
+        margin: 0;
     }
 }
