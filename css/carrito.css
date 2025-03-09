@@ -9,25 +9,36 @@
     text-decoration: none;
 }
 
+body{
+    background-image: url(../assets/HEADER/fondo.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 90px; /* Ajusta según la altura del header */
+}
+
 html {
     scroll-behavior: smooth;
 }
 
+.logo-container img{
+    margin-top: 50px;
+    width: 190px;
+    height: 190px;
+}
+
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
     display: flex;
     align-items: center;
-    gap: 200px;
-    background-color: #000000;
-    padding: 10px 20px;
+    justify-content: space-evenly;
     height: 90px;
-    justify-content: center;
+    background-color: #1E1E1E;
+    border-bottom: solid 2px #f3e06f;
 }
-
-.logo-container img{
-    width: 90px;
-    height: 90px;
-}
-
 .Cart a {
     color: white;
     font-weight: 500;
@@ -54,17 +65,116 @@ html {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.search-icon {
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.search-icon img{
+    width: 40px;
+}
+.search-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+.search-menu.show {
+    display: flex;
+}
+.search-content {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+.search-content input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.search-content button {
+    padding: 12px 20px;
+    background: #ff6969;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.search-content button:hover {
+    background: #b83939;
+}
+.hamburger img{
+    width: 50px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 90px;
+    right: -250px;
+    background: #1E1E1E;
+    width: 250px;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 20px;
+}
+.menu-links a {
+    padding: 15px;
+    text-align: left;
+    display: block;
+    border-bottom: 1px solid #ff6969;
+}
+.menu-links.mostrar {
+    transform: translateX(-250px);
+}
+
+.section {
+    display: none;
+    padding: 20px;
+}
+
+.activo {
+    display: block;
+}
+
 
 .centrar-tabla {
     display: flex;
     justify-content: center;
-    padding-top: 40px;
-    margin-bottom: 10px;
+    padding-top: 50px;
+    padding-bottom: 230px;
 }
 
 .container-tabla {
     width: 80%;
-    background-color: #000000;
+    background-color: #1A1A1A;
     padding: 20px;
     border-radius: 20px;
 }
@@ -81,7 +191,7 @@ td {
 }
 
 th {
-    background-color: #000000;
+    background-color: #1A1A1A;
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -98,7 +208,7 @@ tbody tr {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #000000;
+    background-color: #1A1A1A;
 }
 
 tbody tr:hover {
@@ -122,7 +232,7 @@ img {
 }
 
 .eliminar:hover {
-    background-color: #f3464a;
+    background-color: #ff6969;
 }
 
 .total {
@@ -136,8 +246,8 @@ img {
 
 .comprar-catalogo button {
     padding: 10px 20px 10px 20px;
-    border: 1px solid #000000;
-    border-radius: 10px;
+    background-color: #ffffff;
+    color: black;
 }
 
 .comprar-catalogo {
@@ -151,8 +261,8 @@ img {
     padding: 10px 20px 10px 20px;
     border-radius: .25em;
     border: none;
-    background-color: #000000;
-    color: white;
+    background-color: #ffffff;
+    color: black;
     font-size: 15px;
     font-weight: 500;
     -webkit-box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
@@ -162,7 +272,7 @@ img {
 }
 
 .BtnCompra:hover {
-    background-color: #db0000;
+    background-color: #ff6969;
 }
 
 .btn-container {
@@ -249,4 +359,86 @@ img {
 .total .con-descuento {
     color: #4CAF50; /* Verde para el precio con descuento */
     font-weight: bold;
+}
+
+.footer{
+    background-color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo-footer{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.logo-footer img{
+    width: 150px;
+}
+
+.Footer-secciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.Footer-secciones a{
+    color: white;
+}
+
+.Footer-mail {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-mail a{
+    color: white;
+}
+
+.Footer-logo{
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-logo img{
+    width: 50px;
+}
+
+.Footer-creado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-creado h2{
+    color: white;
+    font-size: 13px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+.Footer-copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.Footer-copy h2{
+    color: white;
+    font-size: 13px;
+    font-weight: 300;
 }

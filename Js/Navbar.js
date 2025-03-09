@@ -7,3 +7,8 @@ function showSection(sectionId) {
     });
     document.getElementById(sectionId).classList.add('activo');
 }
+
+function toggleMenu() {
+    const searchMenu = document.getElementById('searchMenu');
+    searchMenu.classList.toggle('show');
+}

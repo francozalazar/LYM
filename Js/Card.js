@@ -323,8 +323,3 @@ function agregarAlCarrito(nombre, precio, img, cantidad) {
 
     console.log(`Producto agregado al carrito: ${nombre}, ${precio}, ${cantidad}, ${img}`);
 }
-
-function toggleMenu() {
-    const searchMenu = document.getElementById('searchMenu');
-    searchMenu.classList.toggle('show');
-}
