@@ -28,6 +28,15 @@ body, html {
     min-height: 100vh;
 }
 
+button.lupa{
+    margin: 0;
+}
+
+.lupa img{
+    width: 20px;
+}
+
+
 .logo-container img{
     margin-top: 50px;
     width: 190px;
@@ -145,7 +154,7 @@ body, html {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 90px;
+    top: 88px;
     right: -250px;
     background: #1E1E1E;
     width: 250px;
@@ -177,6 +186,7 @@ body, html {
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    margin-bottom: 30px;
 }
 
 .container-tabla {
@@ -266,7 +276,6 @@ img {
 
 .BtnCompra {
     padding: 10px 20px 10px 20px;
-    border-radius: .25em;
     border: none;
     background-color: #ffffff;
     color: black;

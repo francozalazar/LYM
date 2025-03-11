@@ -8,74 +8,104 @@
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="icon" type="image/x-icon" href="./assets/HEADER/logo.png">
 </head>
-<body>
+<body class="fondo-contacto">
     <header>
         <div class="header">
+            <div class="search-icon" onclick="toggleMenu()">
+                <img class="" src="../assets/HEADER/lupa.svg" alt="">
+            </div>
+            <div class="search-menu" id="searchMenu">
+                <div class="search-content">
+                    <input type="text" placeholder="Buscar productos..." id="Busqueda">
+                    <button class="lupa">
+                        <img src="../assets/HEADER/lupa.svg" alt="">
+                    </button>
+                </div>
+            </div>
             <div class="logo-container">
-                <img src="../assets/HEADER/logo.png" alt="Logo">
+                <a href="../productos.html"><img src="../assets/HEADER/logo.png" alt="Logo"></a>
             </div>
-            <div class="Inputnav">
-                <input id="Busqueda" type="search" placeholder="Buscar...">
-            </div>
-            <div class="Cart">
-                <a href="#">Contacto</a>
-                <a href="../Pages/pedidos.html">Ver pedido</a>
+            <div>
+                <nav class="menu">
+                    <div class="hamburger" onclick="menuhambuerguesa()">
+                        <img src="../assets/HEADER/menu.svg" alt="">
+                    </div>
+                    <div class="menu-links">
+                        <a href="../productos.html">Productos</a>
+                        <a href="#">Contacto</a>
+                        <a href="../Pages/pedidos.html">Ver pedido</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
     <main>
-        <div class="container">
-            <section class="info">
-                <h2>💼 Cotización para Importación de Productos</h2>
-                <p>Si estás pensando en traer un producto y querés saber los costos, no dudes en consultarnos. Te asesoramos y te pasamos una cotización sin compromiso. ¡Escribinos y vemos cómo ayudarte!</p>
-    
-                <h2>📦 Lista de Precios para Revendedores</h2>
-                <p>Si te gustaría vender nuestros productos y acceder a precios mayoristas, contactanos y te enviamos nuestra lista de precios. Estamos acá para acompañarte en el crecimiento de tu negocio.</p>
-            </section>
-    
-            <section class="contact-form">
-                <h2>📩 Contactanos</h2>
-                <form action="#" method="POST">
-                    <div class="flex-form">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" required>
-    
-                        <label for="phone">Teléfono:</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="Ej: +54 9 11 1234-5678">
-    
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-    
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-            </section>
+        <div class="centrar-contacto">
+            <div class="container">
+                <section class="info">
+                    <h2> Cotización para Importación de Productos</h2>
+                    <p>Si estás pensando en traer un producto y querés saber los costos, no dudes en consultarnos. Te asesoramos y te pasamos una cotización sin compromiso. ¡Escribinos y vemos cómo ayudarte!</p>
+                    <br>
+                    <h2> Lista de Precios para Revendedores</h2>
+                    <p>Si te gustaría vender nuestros productos y acceder a precios mayoristas, contactanos y te enviamos nuestra lista de precios. Estamos acá para acompañarte en el crecimiento de tu negocio.</p>
+                </section>
+                <section class="contact-form">
+                    <h2> Contactanos</h2>
+                    <form action="https://formsubmit.co/pochiyannone05@gmail.com" method="POST">
+                        <div class="flex-form">
+                            <label for="Nombre">Nombre:</label>
+                            <input type="text" id="name" name="Nombre" required>
+                    
+                            <label for="Telefono">Teléfono:</label>
+                            <input type="tel" id="phone" name="Telefono" required placeholder="Ej: +54 9 11 1234-5678">
+                    
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                    
+                            <label for="Mensaje">Mensaje:</label>
+                            <textarea id="message" name="Mensaje" rows="4" required></textarea>
+                        </div>
+                        <!-- Agrega este campo de email para que FormSubmit lo reconozca -->
+                        <input type="hidden" name="_next" value="../productos.html">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje de contacto">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+            </div>
         </div>
     </main>
-    <footer>
-        <section>
-            <div class="footer">
-                <div class="logo-footer">
-                    <img src="../assets/HEADER/logo.png" alt="Reemplazar imagen">
-                </div>
-                <div class="footer-redes">
-                    <div class="flex-footer">
-                        <a href="#"><img src="../assets/Footer/ig.svg" alt="Instagram"></a>
-                        <a href="#">
-                            <h3>Instagram</h3>
-                        </a>
+        <footer>
+            <section>
+                <div class="footer">
+                    <div class="Contenedor-footer">
+                        <div class="logo-footer">
+                            <img src="../assets/HEADER/logo.png" alt="Reemplazar imagen">
+                        </div>
+                        <div class="Footer-secciones">
+                            <a href="../productos.html">Productos</a>
+                            <a href="../Pages/contacto.html">Contacto</a>
+                            <a href="../Pages/pedidos.html">Ver pedido</a>
+                        </div>
+                        <div class="Footer-mail">
+                            <a href="mailto:pedidos@importacioneslym.com">pedidos@importacioneslym.com</a>
+                        </div>
+                        <div class="Footer-logo">
+                            <a href=""><img src="../assets/Footer/ig.svg" alt=""></a>
+                            <a href=""><img src="../assets/Footer/wpp.svg" alt=""></a>
+                        </div>
+                        <div class="Footer-creado">
+                            <h2>creado por DivStudio</h2>
+                        </div>
+                        <div class="Footer-copy">
+                            <h2>Copyright LyM Importaciones - 20468713387 - 2025. Todos los derechos reservados.</h2>
+                        </div>
                     </div>
-                    <div class="flex-footer">
-                        <a href="#"><img src="../assets/Footer/wpp.svg" alt="Whatsapp"></a>
-                        <a href="#">
-                            <h3>Whatsapp</h3>
-                        </a>
-                    </div>
                 </div>
-            </div>
-        </section>
-    </footer>
+            </section>
+        </footer>
+    <script src="../Js/Card.js"></script>
+    <script src="../Js/Navbar.js"></script>
 </body>
 </html>

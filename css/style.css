@@ -161,6 +161,14 @@ html {
     display: block;
 }
 
+button.lupa{
+    margin: 0;
+}
+
+.lupa img{
+    width: 20px;
+}
+
 .boton-flotante {
     position: fixed;
     bottom: 20px; /* Espaciado desde abajo */
@@ -695,4 +703,23 @@ html {
 @keyframes marquee {
     from { transform: translateX(100vw); }
     to { transform: translateX(-100%); }
+}
+
+.productos-bnt-conteiner{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.productos-btn{
+    padding: 10px 20px 10px 20px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: 500;
+    -webkit-box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
+    -moz-box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
+    box-shadow: 2px 3px 7px -1px rgba(133, 133, 133, 1);
+    cursor: pointer;
 }

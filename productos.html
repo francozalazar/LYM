@@ -23,13 +23,13 @@
             <div class="search-menu" id="searchMenu">
                 <div class="search-content">
                     <input type="text" placeholder="Buscar productos..." id="Busqueda">
-                    <button onclick="buscar()">
-                        <i class="fas fa-search"></i>
+                    <button class="lupa">
+                        <img src="./assets/HEADER/lupa.svg" alt="">
                     </button>
                 </div>
             </div>
             <div class="logo-container">
-                <img src="./assets/HEADER/logo.png" alt="Logo">
+                <a href="#"><img src="./assets/HEADER/logo.png" alt="Logo"></a>
             </div>
             <div>
                 <nav class="menu">
@@ -37,7 +37,7 @@
                         <img src="./assets/HEADER/menu.svg" alt="">
                     </div>
                     <div class="menu-links">
-                        <a href="#mi-seccion">Productos</a>
+                        <a href="#cartel">Productos</a>
                         <a href="./Pages/contacto.html">Contacto</a>
                         <a href="./Pages/pedidos.html">Ver pedido</a>
                     </div>
@@ -46,7 +46,7 @@
         </div>
     </header>
     <main>
-        <a href="#mi-seccion" class="boton-flotante">
+        <a href="#cartel" class="boton-flotante">
             <img src="./assets/HEADER/flecha.svg" alt="">
         </a>
         <section>
@@ -128,12 +128,15 @@
                         </li>
                     </ul>
                 </div>
+                <div class="productos-bnt-conteiner">
+                    <button class="productos-btn">Todos los productos</button>
+                </div>
             </div>
         </section>
         <section>
             <div class="padding-top">
                 <div class="marquee-container">
-                    <div class="marquee">LOS PRODUCTOS SE ENTREGAN A PARTIR DE LA PRIMERA CUOTA 🌟 PAGO UNICAMENTE EN EFECTIVO 🌟 CONSULTAR POR EL STOCK DE COLORES</div>
+                    <div id="cartel" class="marquee">¡Cuanto más comprás, más ahorrás! 🌟 Disfrutá 5% OFF en compras superiores a $200.000 🌟 7% OFF desde $500.000 y un increíble 10% OFF a partir de $900.000. 🌟 ¡No dejes pasar esta oportunidad!</div>
                 </div>
             </div>
         </section>

@@ -42,12 +42,21 @@ document.querySelectorAll(".primera-card").forEach(card => {
         productosFiltrados = productos.filter(producto => producto.categoria === categoria);
         mostrarCantidad = 12; // Reiniciar la cantidad de productos a mostrar
         mostrarProductos();
-        document.querySelector(".nuestros-productos").scrollIntoView({
+        document.getElementById("cartel").scrollIntoView({
             behavior: "smooth"
         });
     });
 });
 
+// Agregar el evento para el botón que cancela el filtrado
+document.querySelector(".productos-btn").addEventListener("click", function () {
+    productosFiltrados = productos; // Mostrar todos los productos
+    mostrarCantidad = 12; // Reiniciar la cantidad de productos a mostrar
+    mostrarProductos();
+    document.getElementById("cartel").scrollIntoView({
+        behavior: "smooth"
+    });
+});
 
 let contenedor = document.getElementById("ContenedorCard");
 let mostrarCantidad = 12;
@@ -63,7 +72,7 @@ function mostrarProductos() {
                 producto.nombre.toLowerCase().includes(termino)
             ) : [...productos];
             mostrarProductos();
-            document.querySelector(".nuestros-productos").scrollIntoView({
+            document.getElementById("cartel").scrollIntoView({
                 behavior: "smooth"
             });
     
@@ -140,7 +149,7 @@ function mostrarProductos() {
     });
 
     verMasBtn.style.display = mostrarCantidad >= productosFiltrados.length ? "none" : "block";
-    verMenosBtn.style.display = mostrarCantidad > 9 ? "block" : "none";
+    verMenosBtn.style.display = mostrarCantidad > 12 ? "block" : "none";
 }
 
 function toggleDescripcion(event, index) {
@@ -260,7 +269,7 @@ verMasBtn.addEventListener("click", function () {
     verMasBtn.innerHTML = '<span class="loader"></span> Cargando...';
 
     setTimeout(() => {
-        mostrarCantidad = Math.min(mostrarCantidad + 9, productosFiltrados.length);
+        mostrarCantidad = Math.min(mostrarCantidad + 12, productosFiltrados.length);
         mostrarProductos();
         verMasBtn.innerHTML = "Ver más";
         verMasBtn.disabled = false;
@@ -272,7 +281,7 @@ verMenosBtn.addEventListener("click", function () {
     verMenosBtn.innerHTML = '<span class="loader"></span> Cargando...';
 
     setTimeout(() => {
-        mostrarCantidad = Math.max(mostrarCantidad - 9, 9);
+        mostrarCantidad = Math.max(mostrarCantidad - 12, 12);
         mostrarProductos();
         verMenosBtn.innerHTML = "Ver menos";
         verMenosBtn.disabled = false;

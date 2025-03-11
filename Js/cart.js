@@ -81,12 +81,20 @@ function actualizarCarrito() {
         total += producto.precio * producto.cantidad;
     });
 
-    // Verificar si el total supera los 100k y aplicar el descuento
-    if (total > 100000) {
-        let descuento = total * 0.02;  // 2% de descuento
-        let totalConDescuento = total - descuento;
+    // Aplicar descuentos según el total
+    let descuento = 0;
+    if (total > 900000) {
+        descuento = total * 0.10; // 10% de descuento
+    } else if (total > 500000) {
+        descuento = total * 0.07; // 7% de descuento
+    } else if (total > 200000) {
+        descuento = total * 0.05; // 5% de descuento
+    }
 
-        // Actualiza el total con el precio original tachado y el precio con descuento
+    let totalConDescuento = total - descuento;
+
+    // Actualizar el total mostrado en la página
+    if (descuento > 0) {
         document.querySelector(".total").innerHTML = `
             <strong>Total:</strong> <span class="tachado">$${total.toFixed(2)}</span> 
             <span class="con-descuento">$${totalConDescuento.toFixed(2)}</span>

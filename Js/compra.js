@@ -9,7 +9,7 @@ document.getElementById("comprarBtn").addEventListener("click", () => {
             customClass: {confirmButton: "BtnCompra",},
             confirmButtonText: "Aceptar"
         });
-        return; // Detiene la ejecución si no hay productos
+        return;
     }
 
     Swal.fire({
@@ -53,8 +53,20 @@ document.getElementById("comprarBtn").addEventListener("click", () => {
                 Cantidad:${producto.cantidad}
                 Precio:$${producto.precio * producto.cantidad}
                 -------`).join('\n');
-            let totalPagar = carrito.reduce((total, producto) => total + producto.precio * producto.cantidad, 0);
-            carritoHTML += `\n🧾 *Total a pagar: $${totalPagar}*`;
+
+            // Calcular total y aplicar descuentos
+            let totalSinDescuento = carrito.reduce((total, producto) => total + producto.precio * producto.cantidad, 0);
+            let descuento = 0;
+
+            if (totalSinDescuento > 900000) {
+                descuento = totalSinDescuento * 0.10; // 10% de descuento
+            } else if (totalSinDescuento > 500000) {
+                descuento = totalSinDescuento * 0.07; // 7% de descuento
+            } else if (totalSinDescuento > 200000) {
+                descuento = totalSinDescuento * 0.05; // 5% de descuento
+            }
+
+            let totalPagar = totalSinDescuento - descuento;
 
             let form = document.getElementById("compraForm");
             if (form) {
@@ -64,15 +76,15 @@ document.getElementById("comprarBtn").addEventListener("click", () => {
                 form.elements["whatsapp"].value = result.value.whatsapp;
                 form.elements["envio"].value = result.value.envio;
                 form.elements["mensaje"].value = result.value.mensaje;
-                form.elements["carrito"].value = `🛒 *Pedido del carrito:*\n\n${carritoHTML}`;
+                form.elements["carrito"].value = `🛒 *Pedido de compra:*\n\n${carritoHTML}\n🧾 *Total sin descuento: $${totalSinDescuento.toFixed(2)}*\n🔖 *Descuento aplicado: $${descuento.toFixed(2)}*\n💰 *Total a pagar: $${totalPagar.toFixed(2)}*`;
                 form.elements["_replyto"].value = result.value.correo;
                 form.elements["_cc"].value = result.value.correo;
 
-                localStorage.removeItem("carrito"); // Limpiar carrito
+                localStorage.removeItem("carrito");
 
-                form.submit(); // Enviar formulario a FormSubmit
+                form.submit();
 
-                Swal.fire("¡Pedido realizado!", "Te hemos enviado un correo con los detalles del pedido, nos comunicaremos a tu numero para seguir con la compra!", "success");
+                Swal.fire("¡Pedido realizado!", "Te hemos enviado un correo con los detalles del pedido. Nos comunicaremos contigo para finalizar la compra.", "success");
             } else {
                 Swal.fire("Error", "No se encontró el formulario de compra.", "error");
             }
