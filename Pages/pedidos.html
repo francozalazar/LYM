@@ -13,106 +13,108 @@
 </head>
 
 <body>
-  <header>
-    <div class="header">
-        <div class="search-icon" onclick="toggleMenu()">
-            <img class="" src="../assets/HEADER/lupa.svg" alt="">
-        </div>
-        <div class="search-menu" id="searchMenu">
-            <div class="search-content">
-                <input type="text" placeholder="Buscar productos..." id="Busqueda">
-                <button onclick="buscar()">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
-        <div class="logo-container">
-          <a href="../productos.html"><img src="../assets/HEADER/logo.png" alt="Logo"></a>
-        </div>
-        <div>
-            <nav class="menu">
-                <div class="hamburger" onclick="menuhambuerguesa()">
-                    <img src="../assets/HEADER/menu.svg" alt="">
-                </div>
-                <div class="menu-links">
-                    <a href="../productos.html">Productos</a>
-                    <a href="../Pages/contacto.html">Contacto</a>
-                    <a href="#">Ver pedido</a>
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-  <main>
-    <div class="centrar-tabla">
-      <div class="container-tabla">
-        <table>
-          <thead>
-            <tr>
-              <th>Producto</th>
-              <th>Imagen</th>
-              <th>Cantidad</th>
-              <th>Precio</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-          <div class="total"><strong>Total:</strong></div>
-        </table>
-        
+  <div class="container">
+    <header>
+      <div class="header">
+          <div class="search-icon" onclick="toggleMenu()">
+              <img class="" src="../assets/HEADER/lupa.svg" alt="">
+          </div>
+          <div class="search-menu" id="searchMenu">
+              <div class="search-content">
+                  <input type="text" placeholder="Buscar productos..." id="Busqueda">
+                  <button onclick="buscar()">
+                      <i class="fas fa-search"></i>
+                  </button>
+              </div>
+          </div>
+          <div class="logo-container">
+            <a href="../productos.html"><img src="../assets/HEADER/logo.png" alt="Logo"></a>
+          </div>
+          <div>
+              <nav class="menu">
+                  <div class="hamburger" onclick="menuhambuerguesa()">
+                      <img src="../assets/HEADER/menu.svg" alt="">
+                  </div>
+                  <div class="menu-links">
+                      <a href="../productos.html">Productos</a>
+                      <a href="../Pages/contacto.html">Contacto</a>
+                      <a href="#">Ver pedido</a>
+                  </div>
+              </nav>
+          </div>
       </div>
-    </div>
-  
-    <div class="comprar-catalogo">
-      <a href="../productos.html"><button class="BtnCompra">Volver al catalogo</button></a>
-      <button id="comprarBtn" class="BtnCompra">Comprar</button>
-    </div>
-    <section>
-      <form id="compraForm" action="https://formsubmit.co/pedidos@importacioneslym.com" method="POST" style="display: none;">
-        <input type="hidden" name="nombre">
-        <input type="hidden" name="localidad">
-        <input type="hidden" name="email">
-        <input type="hidden" name="whatsapp">
-        <input type="hidden" name="envio">
-        <input type="hidden" name="mensaje">
-        <input type="hidden" name="carrito">
-        <input type="hidden" name="_replyto">
-        <input type="hidden" name="_cc">
-        <input type="hidden" name="_subject" value="Nuevo Pedido">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="box">
-        <input type="hidden" name="_next" value="google.com">
-    </form>
-    </section>
-  </main>
-  <footer>
-    <section>
-        <div class="footer">
-            <div class="Contenedor-footer">
-                <div class="logo-footer">
-                    <img src="../assets/HEADER/logo.png" alt="Reemplazar imagen">
-                </div>
-                <div class="Footer-secciones">
-                    <a href="../productos.html">Productos</a>
-                    <a href="../Pages/contacto.html">Contacto</a>
-                    <a href="../Pages/pedidos.html">Ver pedido</a>
-                </div>
-                <div class="Footer-mail">
-                    <a href="mailto:pedidos@importacioneslym.com">pedidos@importacioneslym.com</a>
-                </div>
-                <div class="Footer-logo">
-                    <a href=""><img src="./assets/Footer/ig.svg" alt=""></a>
-                    <a href=""><img src="./assets/Footer/wpp.svg" alt=""></a>
-                </div>
-                <div class="Footer-creado">
-                    <h2>creado por DivStudio</h2>
-                </div>
-                <div class="Footer-copy">
-                    <h2>Copyright LyM Importaciones - 20468713387 - 2025. Todos los derechos reservados.</h2>
-                </div>
-            </div>
+  </header>
+    <main>
+      <div class="centrar-tabla">
+        <div class="container-tabla">
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Imagen</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <div class="total"><strong>Total:</strong></div>
+          </table>
+          
         </div>
-    </section>
-</footer>
+      </div>
+    
+      <div class="comprar-catalogo">
+        <a href="../productos.html"><button class="BtnCompra">Volver al catalogo</button></a>
+        <button id="comprarBtn" class="BtnCompra">Comprar</button>
+      </div>
+      <section>
+        <form id="compraForm" action="https://formsubmit.co/pedidos@importacioneslym.com" method="POST" style="display: none;">
+          <input type="hidden" name="nombre">
+          <input type="hidden" name="localidad">
+          <input type="hidden" name="email">
+          <input type="hidden" name="whatsapp">
+          <input type="hidden" name="envio">
+          <input type="hidden" name="mensaje">
+          <input type="hidden" name="carrito">
+          <input type="hidden" name="_replyto">
+          <input type="hidden" name="_cc">
+          <input type="hidden" name="_subject" value="Nuevo Pedido">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_next" value="google.com">
+      </form>
+      </section>
+    </main>
+    <footer>
+      <section>
+          <div class="footer">
+              <div class="Contenedor-footer">
+                  <div class="logo-footer">
+                      <img src="../assets/HEADER/logo.png" alt="Reemplazar imagen">
+                  </div>
+                  <div class="Footer-secciones">
+                      <a href="../productos.html">Productos</a>
+                      <a href="../Pages/contacto.html">Contacto</a>
+                      <a href="../Pages/pedidos.html">Ver pedido</a>
+                  </div>
+                  <div class="Footer-mail">
+                      <a href="mailto:pedidos@importacioneslym.com">pedidos@importacioneslym.com</a>
+                  </div>
+                  <div class="Footer-logo">
+                      <a href=""><img src="../assets/Footer/ig.svg" alt=""></a>
+                      <a href=""><img src="../assets/Footer/wpp.svg" alt=""></a>
+                  </div>
+                  <div class="Footer-creado">
+                      <h2>creado por DivStudio</h2>
+                  </div>
+                  <div class="Footer-copy">
+                      <h2>Copyright LyM Importaciones - 20468713387 - 2025. Todos los derechos reservados.</h2>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </footer>
+  </div>
   <script src="../Js/cart.js"></script>
   <script src="../Js/compra.js"></script>
   <script src="../Js/Navbar.js"></script>

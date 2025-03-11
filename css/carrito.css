@@ -16,8 +16,16 @@ body{
     padding-top: 90px; /* Ajusta según la altura del header */
 }
 
-html {
+body, html {
+    height: 100%;
+    margin: 0;
     scroll-behavior: smooth;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, contenido flexible y footer */
+    min-height: 100vh;
 }
 
 .logo-container img{
@@ -169,7 +177,6 @@ html {
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    padding-bottom: 230px;
 }
 
 .container-tabla {
@@ -366,7 +373,7 @@ img {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 380px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -441,4 +448,5 @@ img {
     color: white;
     font-size: 13px;
     font-weight: 300;
+    text-align: center;
 }
