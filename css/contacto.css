@@ -131,7 +131,7 @@ button.lupa{
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 90px;
+    top: 88px;
     right: -250px;
     background: #1E1E1E;
     width: 250px;
